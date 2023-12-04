@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+@keyframes slide {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  100% {
+    left: 80%;
+    top: 0;
+  }
+}
+.stage {
+  background: white;
+  height: 10px;
+  position: relative;
+  min-width: 538px;
+}
+.stage:hover .ball {
+  animation: slide 2s linear;
+}
+.ball{
+  background: #2db34a;
+  border-bottom: 1px solid green;
+  position: absolute;
+  width: 100px;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.main img{
+    margin: 30px;
+}
+
+.nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: white;
+  color: black;
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
+}
+
+
+#active:checked ~ .nav{
+  clip-path: circle(75%);
+}
+
+.menu-btn{
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  /* left: 20px; */
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+  background: white;
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .menu-btn{
+  background: black;
+  color: white;
+}
+
+#active:checked ~ .menu-btn i:before{
+  content: "\f00d";
+}
+
+.nav .left ul {
+  top: 29%;
+  left: 67%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  position: relative;
+  line-height: 50px;
+}
+
+.nav .right ul {
+  top: 40%;
+  left: 174%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  position: relative;
+}
+
+
+.nav ul li{
+  margin: 15px 0;
+  text-align: start;
+}
+
+
+.nav  .right ul li  a{
+  color: black;
+  position: relative;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+
+.nav .left ul li  a{
+  text-decoration: none;
+  color: black;
+  position: relative;
+  line-height: 50px;
+  font-size: 60px;
+  font-weight: 600;
+
+}
+
+
+.left ul li:nth-child(1):hover{
+  background-color: #0087ca;
+  transform: translate(40px);
+  transition: all 0.5s ease-in-out !important;
+  
+  
+}
+
+.left ul li:nth-child(2):hover{
+  background-color: red;
+    transform: translate(40px);
+    transition: all 0.5s ease-in-out !important;
+
+
+}
+
+.left ul li:nth-child(3):hover{
+  background-color: green;
+    transform: translate(40px);
+    transition: all 0.5s ease-in-out !important;
+
+}
+
+.left ul li:nth-child(4):hover{
+  background-color: orange;
+  transform: translate(40px);
+  transition: all 0.5s ease-in-out !important;
+
+}
+
+.left ul li:nth-child(5):hover{
+  background-color: red;
+    transform: translate(40px);
+     transition: all 0.5s ease-in-out !important;
+}
+ 
+
+
+.lets-talk{
+    display: flex;
+    align-items: center;
+    margin-left: 1000px;
+}
+
+
+
+
+
+
+
+/* .nav ul li a:after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 50px;
+  left: 0;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+} 
+
+
+/* .nav ul li a:hover:after{
+  transform: scaleY(1);
+}
+.nav ul li a:hover{
+    opacity: 0;
+} */
+input[type="checkbox"]{
+  display: none;
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  text-align: center;
+  width: 100%;
+}
+.content .title{
+  font-size: 40px;
+  font-weight: 700;
+}
+.content p{
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.menu h6 {
+  margin-top: 31px;
+  text-transform: uppercase;
+  transform: translateX(148%) rotate(-90deg);
+  justify-self: self-end;
+}
+
+
+.numbering {
+  text-transform: uppercase;
+  height: 0px;
+  transform: translateX(-76%) rotate(0deg);
+}
+
+
+
+.social-links {
+  display: flex;
+  left: 20px;
+  margin: 130px -14px;
+}
+
+.social-links img{
+  width: 30px;
+}
+
+
+
+.social-links li {
+  margin: 11px -29px 154px 0px !important;
+}
+
+/*-----------------------------------*/
+
+.hover-underline-animation a{
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+  
+} 
+
+.hover-underline-animation a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
